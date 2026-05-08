@@ -8,6 +8,13 @@ My stack spans the full marketing funnel — from lead capture and CRM to conten
 
 ## Projects
 
+### [ai-marketing-briefing](https://github.com/philip95macdonald-cmd/ai-marketing-briefing)
+Daily briefing automation for marketing managers. Pulls Google Calendar events and Notion tasks, generates a prioritised summary via Claude, delivers it to Slack before the first meeting. Runs on a GitHub Actions schedule — zero infrastructure to maintain.
+
+`Node.js` `Claude API` `Google Calendar` `Notion` `Slack` `GitHub Actions`
+
+---
+
 ### [ngo-stakeholder-stack](https://github.com/philip95macdonald-cmd/ngo-stakeholder-stack)
 Python toolkit for NGO stakeholder communication. Crawls press contacts, syncs politicians from Abgeordnetenwatch, monitors topics and crises, builds impact stories — all feeding into Brevo. Generalized from a production press stack that replaced ~80% of a Meltwater subscription.
 
@@ -29,7 +36,7 @@ Python toolkit for NGO stakeholder communication. Crawls press contacts, syncs p
 
 ## What I'm building next
 
-More repos incoming — AI marketing briefing (Google Cal + Notion + Claude), SEO audit toolkit (GSC + GA4), and a content engine with AI-assisted scoring and repurposing.
+More repos incoming — SEO audit toolkit (GSC + GA4), lead capture pipeline (Brevo + Cloudflare Workers), and a content engine with AI-assisted scoring and repurposing.
 
 ---
 
