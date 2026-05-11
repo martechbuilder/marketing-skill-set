@@ -1,22 +1,22 @@
-# Philip MacDonald — Marketing Manager
+# Marketing Automation Toolkit
 
 Most marketing managers use tools. I also build them.
 
-My day job is running full-funnel marketing — campaigns, SEO, CRM, analytics. On top of that I build the automation layer that makes the rest faster: Claude-integrated workflows, Cloudflare Workers, n8n pipelines, Python scrapers. Everything here came out of a real problem I needed to solve.
+I build the automation layer that makes marketing faster: Claude-integrated workflows, Cloudflare Workers, n8n pipelines, Python scrapers. Everything here started from a real problem.
 
 ---
 
 ## Projects
 
 ### [ai-marketing-briefing](https://github.com/philip95macdonald-cmd/ai-marketing-briefing)
-Every morning at 07:30, Claude reads my Google Calendar and Notion task board and sends a prioritised briefing to Slack — before the first meeting. Built because context-switching between three tools to plan the day is a waste of 20 minutes.
+Every morning at 07:30, Claude reads your Google Calendar and Notion task board and sends a prioritised briefing to Slack — before the first meeting. Built because context-switching between three tools to plan the day wastes 20 minutes.
 
 `Claude API` `Google Calendar` `Notion` `Slack` `GitHub Actions`
 
 ---
 
 ### [content-seo-engine](https://github.com/philip95macdonald-cmd/content-seo-engine)
-Replaced Clearscope with three scripts: Claude generates data-driven briefs, a deterministic scorer grades finished posts on 5 SEO/E-E-A-T/GEO dimensions (100 pts), and a schema generator outputs production-ready JSON-LD. Used in a real editorial workflow.
+Three scripts: Claude generates data-driven content briefs, a deterministic scorer grades finished posts on 5 SEO/E-E-A-T/GEO dimensions (100 pts), and a schema generator outputs production-ready JSON-LD.
 
 `Claude API` `SEO` `JSON-LD` `E-E-A-T` `GEO`
 
@@ -43,13 +43,6 @@ Cloudflare Worker between any signed webhook source and n8n. Verifies HMAC-SHA25
 
 ---
 
-### [ngo-stakeholder-stack](https://github.com/philip95macdonald-cmd/ngo-stakeholder-stack)
-Python toolkit for NGO stakeholder communication: press contact crawler (robots.txt-compliant, NER-based, 49 tests), politician data from Abgeordnetenwatch, topic + crisis monitor, Brevo sync. Generalized from a production stack that replaced ~80% of a Meltwater subscription.
-
-`Python` `Playwright` `NLP` `Brevo` `DSGVO-compliant`
-
----
-
 ## Stack
 
 | Area | Tools |
@@ -58,9 +51,5 @@ Python toolkit for NGO stakeholder communication: press contact crawler (robots.
 | Automation | n8n, Cloudflare Workers, GitHub Actions |
 | CRM & Email | Brevo, HubSpot, Salesforce |
 | Analytics | GA4, Google Search Console, Google Ads, GTM |
-| Content | Higgsfield (AI video), custom SEO scoring |
+| Content | Custom SEO scoring, JSON-LD generation |
 | Infrastructure | Cloudflare, Notion, Slack |
-
----
-
-*Germany · Open to roles where marketing and engineering overlap*
