@@ -43,6 +43,13 @@ Cloudflare Worker between any signed webhook source and n8n. Verifies HMAC-SHA25
 
 ---
 
+### [ngo-stakeholder-stack](https://github.com/philip95macdonald-cmd/ngo-stakeholder-stack)
+Open-source Python toolkit for NGO press and stakeholder communication: press contact crawler (robots.txt-compliant, NER-based, 49 tests), politician data from Abgeordnetenwatch, topic + crisis monitor, Brevo sync.
+
+`Python` `Playwright` `NLP` `Brevo` `DSGVO-compliant`
+
+---
+
 ## Stack
 
 | Area | Tools |
