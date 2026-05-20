@@ -1,62 +1,34 @@
-# Marketing Automation Toolkit
+# marketing-skill-set
 
-Most marketing managers use tools. I also build them.
+A collection of small marketing-engineering experiments I've built to explore how
+LLMs and serverless infrastructure can replace pieces of typical paid marketing
+SaaS stacks. Each repo solves one focused problem.
 
-I build the automation layer that makes marketing faster: Claude-integrated workflows, Cloudflare Workers, n8n pipelines, Python scrapers. Everything here started from a real problem.
+Not a product. Not a service. Personal learning, open-sourced.
 
 ---
 
 ## Projects
 
-### [ai-marketing-briefing](https://github.com/philip95macdonald-cmd/ai-marketing-briefing)
-Every morning at 07:30, Claude reads your Google Calendar and Notion task board and sends a prioritised briefing to Slack — before the first meeting. Built because context-switching between three tools to plan the day wastes 20 minutes.
-
-`Claude API` `Google Calendar` `Notion` `Slack` `GitHub Actions`
-
----
-
-### [content-seo-engine](https://github.com/philip95macdonald-cmd/content-seo-engine)
-Three scripts: Claude generates data-driven content briefs, a deterministic scorer grades finished posts on 5 SEO/E-E-A-T/GEO dimensions (100 pts), and a schema generator outputs production-ready JSON-LD.
-
-`Claude API` `SEO` `JSON-LD` `E-E-A-T` `GEO`
+| Repo | What it does | Stack |
+|---|---|---|
+| [ai-marketing-briefing](https://github.com/martechbuilder/ai-marketing-briefing) | Daily AI briefing — Calendar + tasks → Claude → Slack | Claude API, Notion, Slack |
+| [content-seo-engine](https://github.com/martechbuilder/content-seo-engine) | AI content briefs, deterministic post scorer, JSON-LD generator | Claude API, SEO, Schema.org |
+| [seo-audit-toolkit](https://github.com/martechbuilder/seo-audit-toolkit) | On-page auditor + GSC query reporter | Node.js, GSC API |
+| [lead-pipeline](https://github.com/martechbuilder/lead-pipeline) | Form-to-ESP handler on Cloudflare Workers, with adapter pattern | Cloudflare Workers, Brevo |
+| [webhook-n8n-bridge](https://github.com/martechbuilder/webhook-n8n-bridge) | Signed-webhook verifier + dedup for n8n | Cloudflare Workers, n8n, HMAC |
+| [ngo-stakeholder-stack](https://github.com/martechbuilder/ngo-stakeholder-stack) | Python toolkit for NGO press + stakeholder communication | Python, Playwright, NLP |
 
 ---
 
-### [seo-audit-toolkit](https://github.com/philip95macdonald-cmd/seo-audit-toolkit)
-Two scripts: on-page technical auditor (10 signals, runs in 2 seconds on any URL) and a Google Search Console report that pulls top queries, clicks, CTR, and position for the last 28 days — without opening a browser.
+## Stack I'm exploring
 
-`Google Search Console API` `Technical SEO` `Node.js`
-
----
-
-### [lead-pipeline](https://github.com/philip95macdonald-cmd/lead-pipeline)
-Form-to-ESP handler on Cloudflare Workers. CORS, rate-limiting, honeypot bot detection, GDPR consent timestamps, and an adapter pattern that lets you swap Brevo for HubSpot or Mailchimp by changing one env var.
-
-`Cloudflare Workers` `Brevo` `GDPR` `Marketing Automation`
+- **LLM:** Claude (Anthropic), structured prompts
+- **Serverless:** Cloudflare Workers, GitHub Actions
+- **Automation:** n8n
+- **Languages:** JavaScript / Node.js, Python
+- **Marketing APIs:** Google Calendar, Google Search Console, Notion, Slack, Brevo
 
 ---
 
-### [webhook-n8n-bridge](https://github.com/philip95macdonald-cmd/webhook-n8n-bridge)
-Cloudflare Worker between any signed webhook source and n8n. Verifies HMAC-SHA256 or Stripe-style signatures, deduplicates retries, then forwards to n8n — so the automation logic lives in n8n, not scattered across glue code.
-
-`Cloudflare Workers` `n8n` `Webhooks` `HMAC`
-
----
-
-### [ngo-stakeholder-stack](https://github.com/philip95macdonald-cmd/ngo-stakeholder-stack)
-Open-source Python toolkit for NGO press and stakeholder communication: press contact crawler (robots.txt-compliant, NER-based, 49 tests), politician data from Abgeordnetenwatch, topic + crisis monitor, Brevo sync.
-
-`Python` `Playwright` `NLP` `Brevo` `DSGVO-compliant`
-
----
-
-## Stack
-
-| Area | Tools |
-|---|---|
-| AI / LLM | Claude (Anthropic), custom prompt pipelines |
-| Automation | n8n, Cloudflare Workers, GitHub Actions |
-| CRM & Email | Brevo, HubSpot, Salesforce |
-| Analytics | GA4, Google Search Console, Google Ads, GTM |
-| Content | Custom SEO scoring, JSON-LD generation |
-| Infrastructure | Cloudflare, Notion, Slack |
+*All experiments. MIT licensed unless noted.*
